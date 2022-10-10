@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/399.1f5694bd.chunk.js","mappings":"gNAGe,SAASA,IACtB,OAAO,SAAC,KAAD,GACR,C","sources":["SharedLayout/SharedLayout.jsx"],"sourcesContent":["import React from 'react';\nimport { Link, Outlet } from 'react-router-dom';\n\nexport default function SharedLayout() {\n  return <Outlet />;\n}\n"],"names":["SharedLayout"],"sourceRoot":""}
