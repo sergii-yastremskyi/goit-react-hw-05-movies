@@ -1,7 +1,6 @@
 import React from 'react';
-import { nanoid } from 'nanoid';
 import styled from 'styled-components';
-import { Routes, Route, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import css from './header.module.css';
 
 const StyledLink = styled(NavLink)`

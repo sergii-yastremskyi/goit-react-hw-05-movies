@@ -1,7 +1,14 @@
 import logo from './logo.svg';
 
-import React, { useState, useContext, Suspense } from 'react';
-import { Routes, Route, NavLink, useLocation } from 'react-router-dom';
+import React, { useState, useContext, Suspense, useMemo } from 'react';
+import {
+  Routes,
+  Route,
+  NavLink,
+  useLocation,
+  useNavigate,
+  useParams,
+} from 'react-router-dom';
 import Header from './components/header';
 // import Home from './pages/Home';
 // import Movies from './pages/Movies';
@@ -33,7 +40,7 @@ function App() {
                 <Route path="cast" element={<Cast />} />
                 <Route path="reviews" element={<Reviews />} />
               </Route>
-              <Route parth="*" element={<Home />} />
+              <Route path="/*" element={<Home />} />
             </Route>
           </Routes>
         </Suspense>
