@@ -13,15 +13,7 @@ export default function Searchbar({ submitHandler }) {
     e.preventDefault();
     setState(value);
   };
-  //   const handleFetch = () => {
-  //     fetch(
-  //       `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=${state}&page=1&include_adult=false`
-  //     )
-  //       .then(response => response.json())
-  //       .then(data => {
-  //         setMoviesSearch(data.results);
-  //       });
-  //   };
+
   useEffect(() => {
     const query = searchParams.get('query');
     if (query) {
@@ -38,7 +30,7 @@ export default function Searchbar({ submitHandler }) {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className={css.searchForm} onSubmit={handleSubmit}>
         <input
           type="text"
           name="search"
@@ -46,6 +38,7 @@ export default function Searchbar({ submitHandler }) {
           onChange={onSearch}
           id="search"
         />
+        <button type="submit">Search</button>
       </form>
     </div>
   );

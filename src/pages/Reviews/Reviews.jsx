@@ -23,14 +23,18 @@ export default function Reviews() {
     <div className={css.reviews}>
       <h3 className={css.reviewsTitle}>Reviews</h3>
       <div>
-        <ul className={css.reviewsList}>
-          {reviews.map(rev => (
-            <li className={css.reviewsListItem} key={rev.id}>
-              <p className={css.authorName}>{rev.author}</p>
-              <p className={css.revContent}>{rev.content}</p>
-            </li>
-          ))}
-        </ul>
+        {reviews.length > 0 ? (
+          <ul className={css.reviewsList}>
+            {reviews.map(rev => (
+              <li className={css.reviewsListItem} key={rev.id}>
+                <p className={css.authorName}>{rev.author}</p>
+                <p className={css.revContent}>{rev.content}</p>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>No reviews for this movie</p>
+        )}
       </div>
     </div>
   );

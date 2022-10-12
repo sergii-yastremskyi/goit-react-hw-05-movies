@@ -9,8 +9,7 @@ export default function MovieThumbs({ moviesSearch }) {
   });
   return (
     <div className={css.thumbsContainer}>
-      Movie Thumbs
-      {moviesSearch.length > 0 ? (
+      {moviesSearch.length > 0 && (
         <ul className={css.thumbsList}>
           {moviesSearch.map(({ poster_path, title, id }) => (
             <li className={css.thumbListItem} key={id}>
@@ -26,8 +25,6 @@ export default function MovieThumbs({ moviesSearch }) {
             </li>
           ))}
         </ul>
-      ) : (
-        <p>No such movie</p>
       )}
     </div>
   );
