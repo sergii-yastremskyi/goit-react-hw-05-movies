@@ -31,7 +31,7 @@ export default function MovieDetails() {
       const res = await fetch(
         `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=en-US`
       ).then(res => res.json());
-      console.log(res);
+
       setMovieState(res);
     }
   };
@@ -57,11 +57,17 @@ export default function MovieDetails() {
       </div>
       <div className={css.movieContainer}>
         <div>
-          {poster_path && (
+          {poster_path ? (
             <img
               className={css.poster}
               src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
               alt=""
+            />
+          ) : (
+            <img
+              className={css.poster}
+              src={`https://via.placeholder.com/200x300?text=${title}`}
+              alt={title}
             />
           )}
         </div>

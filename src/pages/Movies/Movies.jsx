@@ -5,7 +5,7 @@ import MoviesThumbs from '../../pages/MovieThumbs';
 import { apiKey } from '../Home/Home';
 export default function Movies() {
   const { state, setState } = useContext(QueryContext);
-  console.log('Movies', state);
+
   const [moviesSearch, setMoviesSearch] = useState([]);
 
   const handleFetch = value => {

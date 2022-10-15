@@ -1,19 +1,7 @@
-import logo from './logo.svg';
-
-import React, { useState, useContext, Suspense, useMemo } from 'react';
-import {
-  Routes,
-  Route,
-  NavLink,
-  useLocation,
-  useNavigate,
-  useParams,
-} from 'react-router-dom';
+import React, { useState, Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/header';
-// import Home from './pages/Home';
-// import Movies from './pages/Movies';
-// import MovieDetails from './pages/MovieDetails';
-// import SharedLayout from './SharedLayout';
+
 import Cast from './pages/Cast';
 import Reviews from './pages/Reviews';
 import './App.css';
@@ -31,7 +19,7 @@ function App() {
     <div className="App">
       <Header />
       <QueryContext.Provider value={{ state, setState }}>
-        <Suspense fallback={<div>Завантаження...</div>}>
+        <Suspense fallback={<div>Loading...</div>}>
           <Routes>
             <Route path="/" element={<SharedLayout />}>
               <Route index element={<Home />} />

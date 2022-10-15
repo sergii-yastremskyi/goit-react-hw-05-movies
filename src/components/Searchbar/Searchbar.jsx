@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { apiKey } from '../../pages/Home/Home';
 import css from './searchbar.module.css';
+import PropTypes from 'prop-types';
 
 export default function Searchbar({ submitHandler }) {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -43,3 +44,6 @@ export default function Searchbar({ submitHandler }) {
     </div>
   );
 }
+Searchbar.propTypes = {
+  submitHandler: PropTypes.func,
+};

@@ -13,7 +13,6 @@ export default function Cast() {
         `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${apiKey}&language=en-US`
       ).then(res => res.json());
       setCast(res.cast);
-      console.log(cast);
     }
   };
   useEffect(() => {

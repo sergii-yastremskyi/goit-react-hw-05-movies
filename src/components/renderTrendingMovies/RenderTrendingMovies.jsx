@@ -1,5 +1,6 @@
 import css from './renderTrendingMovies.module.css';
 import { Link, useLocation } from 'react-router-dom';
+import PropTypes from 'prop-types';
 function RenderTrendingMovies({ data }) {
   const location = useLocation();
 
@@ -15,4 +16,8 @@ function RenderTrendingMovies({ data }) {
     </ul>
   );
 }
+RenderTrendingMovies.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.object),
+};
+
 export default RenderTrendingMovies;
