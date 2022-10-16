@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import css from './cast.module.css';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import { apiKey } from '../Home/Home';
 
 export default function Cast() {

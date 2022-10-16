@@ -19,6 +19,7 @@ export default function MovieDetails() {
   const location = useLocation();
   const navigate = useNavigate();
   const backLinkHref = location.state?.from ?? '/';
+
   const goBack = () => {
     if (location.state?.from) {
       navigate(backLinkHref);
@@ -92,8 +93,12 @@ export default function MovieDetails() {
       <span className={css.breaker}></span>
       <div className={css.additionalInfoCOntainer}>
         <h3>Additional info</h3>
-        <Link to="cast">Cast</Link>
-        <Link to="reviews">Reviews</Link>
+        <Link to="cast" state={location.state}>
+          Cast
+        </Link>
+        <Link to="reviews" state={location.state}>
+          Reviews
+        </Link>
       </div>
       <span className={css.breaker}></span>
       <Outlet />

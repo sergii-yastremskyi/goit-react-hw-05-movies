@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import css from './reviews.module.css';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import { apiKey } from '../Home/Home';
 
 export default function Reviews() {
