@@ -6,7 +6,7 @@ import { apiKey } from '../Home/Home';
 export default function Cast() {
   const { movieId } = useParams();
   const [cast, setCast] = useState([]);
-
+  const location = useLocation();
   const handleFetch = async () => {
     if (movieId) {
       const res = await fetch(
